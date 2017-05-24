@@ -138,6 +138,27 @@ export default class Sidebar extends React.Component {
 
         document.addEventListener('keydown', this.navigateChannelShortcut);
         document.addEventListener('keydown', this.navigateUnreadChannelShortcut);
+		
+		$('sidebar-left').on("swipeleft", function(event) {
+			$(this).hide();
+		}
+			);
+		$('sidebar-left').on("touchstart", function(event) {
+			$(this).hide();
+		}
+			);
+		$('sidebar-left').on("touchend", function(event) {
+			$(this).hide();
+		}
+			);
+		$('sidebar-left').on("touchmove", function(event) {
+			$(this).hide();
+		}
+			);
+		$('sidebar-left').on("touchcancel", function(event) {
+			$(this).hide();
+		}
+			);
     }
 
     shouldComponentUpdate(nextProps, nextState) {

@@ -95,6 +95,7 @@ export default class Navbar extends React.Component {
         UserStore.addStatusesChangeListener(this.onChange);
         PreferenceStore.addChangeListener(this.onChange);
         $('.inner-wrap').click(this.hideSidebars);
+        $('.sidebar--left').on("click", this.hideSidebars);
         document.addEventListener('keydown', this.showChannelSwitchModal);
     }
 
